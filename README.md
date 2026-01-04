@@ -55,3 +55,41 @@ The project is developed in three stages, each represented by a separate Git bra
 
 ```bash
 python smarthome.py
+
+
+
++--------------------------+
+|          Device          |
++--------------------------+
+| - _name: String          |
+| - __status: Boolean      |
++--------------------------+
+| + turn_on(): void        |
+| + turn_off(): void       |
+| + is_on(): Boolean       |
++--------------------------+
+             ^
+             |
+      ----------------
+      |              |
++-------------+   +----------------+
+|    Light    |   |   Thermostat   |
++-------------+   +----------------+
+| - _brightness:  | - _temperature:|
+|   Integer       |   Integer       |
++-------------+   +----------------+
+| + set_brightness() | + set_temperature() |
+|                   | + auto_adjust()      |
++------------------------------------------+
+
++--------------------------+
+|        SmartHome         |
++--------------------------+
+| - _devices: List         |
++--------------------------+
+| + add_device()           |
+| + turn_all_on()          |
+| + turn_all_off()         |
+| + night_mode()           |
+| + energy_saver()         |
++--------------------------+
